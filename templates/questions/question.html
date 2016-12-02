@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brain overflow</title>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/simplemde.min.css">
+  <title> {{question.title}} </title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/simplemde.min.css">
 
 </head>
 <body>
@@ -22,7 +22,6 @@
       <a class="navbar-brand" href="index.html">Brain overflow</a>
     </div>
 
-
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Questions</a></li>
@@ -31,7 +30,7 @@
         <!-- <li><a href="#">Sign in</a></li> -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle navbar-avatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <img src="img/user-placeholder.png" height="36" class="img-rounded">
+          <img src="/img/user-placeholder.png" height="36" class="img-rounded">
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
@@ -60,7 +59,7 @@
 <div class="container">
   <div class="col-xs-12">
     <!-- Question -->
-    <h2>Question title</h2>
+    <h2>{{question.title}}</h2>
     <small class="help-block">8 views</small>
     <hr>
     <div class="clearfix">
@@ -79,7 +78,7 @@
       </div>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+          {{question.body}}
         </p>
         <p>
           <a href="#" class="badge">tag1</a>
@@ -98,7 +97,7 @@
 
     <!-- Answers -->
 
-    <h4>35 answers</h4>
+    <h4>{{ answers | length }} answers</h4>
 
     <ul class="nav nav-tabs nav-justified margin-bottom-20">
       <li class="active"><a href="">Best</a></li>
@@ -106,7 +105,9 @@
       <li><a href="">Old first</a></li>
     </ul>
 
-    <!-- One answer -->
+
+
+    {% for answer in question.answers.get %}
     <div class="clearfix">
       <div class="pull-left padding-right-20">
         <div>
@@ -123,73 +124,20 @@
       </div>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+          {{answer.body}}
         </p>
         <div class="clearfix">
           <div class="pull-right">
-            <a href="">Mike Bobson</a> 1 day ago
+            <a href="">{{ answer.user.name }}</a> 1 day ago
           </div>
         </div>
       </div>
     </div>
 
     <hr>
+    {% endfor %}
 
-    <!-- One answer -->
-    <div class="clearfix">
-      <div class="pull-left padding-right-20">
-        <div>
-          <a href="">
-            <span class="glyphicon glyphicon-thumbs-up"></span>
-          </a>
-        </div>
-        <div><big>1</big></div>
-        <div>
-          <a href="">
-            <span class="glyphicon glyphicon-thumbs-down"></span>
-          </a>
-        </div>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit
-        </p>
-        <div class="clearfix">
-          <div class="pull-right">
-            <a href="">Mike Bobson</a> 1 day ago
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <hr>
-
-    <!-- One answer -->
-    <div class="clearfix">
-      <div class="pull-left padding-right-20">
-        <div>
-          <a href="">
-            <span class="glyphicon glyphicon-thumbs-up"></span>
-          </a>
-        </div>
-        <div><big>1</big></div>
-        <div>
-          <a href="">
-            <span class="glyphicon glyphicon-thumbs-down"></span>
-          </a>
-        </div>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit
-        </p>
-        <div class="clearfix">
-          <div class="pull-right">
-            <a href="">Mike Bobson</a> 1 day ago
-          </div>
-        </div>
-      </div>
-    </div>
 
     <nav aria-label="Page navigation">
       <ul class="pagination pagination-sm margin-bottom-0">
@@ -215,11 +163,11 @@
 
     <!-- New answer form -->
     <h4>Your answer</h4>
-    <form>
+    <form method="post" name="answer-form">
       <div class="form-group">
-        <textarea id="answer-text" class="form-control"></textarea>
+        <textarea name="answer-text" id="answer-text" class="form-control"></textarea>
       </div>
-      <button href="#" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 
@@ -229,13 +177,13 @@
 <footer>
   <div class="container">
     <hr>
-    Made by Roman Ephimov in 2016
+    Made by Roman Yephimov in 2016
   </div>
 </footer>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/simplemde.min.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/simplemde.min.js"></script>
 <script type="text/javascript">
 
   var simplemde = new SimpleMDE({

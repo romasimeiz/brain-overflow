@@ -1,0 +1,66 @@
+02-12-2016 12:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 12:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 12:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 12:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM questions WHERE  id = '3'
+
+02-12-2016 16:12     SELECT * FROM answers WHERE question_id = '3'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+
+02-12-2016 16:12     SELECT * FROM users WHERE id = '1'
+

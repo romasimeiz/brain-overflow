@@ -15,8 +15,10 @@ class AbstractController  {
     public function render($path, $data)
     {
         $loader = new \Twig_Loader_Filesystem(\App::$BASE_DIR.'/templates');
-        $twig = new \Twig_Environment($loader);
 
-        return $twig->render($path.'.html', $data);        
+        $twig = new \Twig_Environment($loader, array('debug' => true));
+        $twig->addExtension(new \Twig_Extension_Debug());
+
+        return $twig->render($path.'.html', $data);
     }
 }

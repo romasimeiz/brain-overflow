@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css|woff2)
+RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]

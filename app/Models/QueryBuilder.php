@@ -25,8 +25,15 @@ class QueryBuilder
     public function get()
     {
         $statement = $this->db->prepare($this->query);
+        if(php_sapi_name() === 'cli') {
+            echo $this->query;
+        } else {
+            $date = new \DateTime();
+            $date = $date->format("d-m-Y H:m");
+            file_put_contents('../log/queries.txt',  $date . "     "  . $this->query . "\n\n", FILE_APPEND);
+        }
+
         $statement->execute();
-        echo "\n".$this->query."\n";
         return $statement->fetchAll(\PDO::FETCH_CLASS, $this->resultClass);
     }
 
